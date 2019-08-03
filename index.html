@@ -13,30 +13,46 @@
             box-sizing: border-box;
         }
 
+
         body {
-            font: 13px Helvetica, Arial;
+            font: Helvetica, Arial;
+            font-size: 2rem;
         }
 
         form {
-            background: #000;
+            background:rgb(255, 194, 194);
             padding: 3px;
             position: fixed;
             bottom: 0;
             width: 100%;
+            box-shadow: 0 0px 5px 1px rgb(241, 195, 195);
+        }
+        textarea:focus, input:focus{
+            outline: none;
         }
 
         form input {
             border: 0;
-            padding: 10px;
-            width: calc(100% - 2rem);
+            padding: 1rem;
+            width: calc(100% - 5rem - .5%);
             margin-right: .5%;
+            border-radius: 50px;
+            font-size: 1rem;
         }
 
         form button {
-            width: 2rem;
-            background: rgb(130, 224, 255);
+            width: 5rem;
+            color: white;
+            font-weight: 700;
+            background-image: linear-gradient(68deg, #FF70A6, #FF9770);
             border: none;
-            padding: 10px;
+            padding: 1rem;
+            border-radius: 50px;
+            font-size: 1rem;
+        }
+        form button:focus, form button:hover {
+            background-image: linear-gradient(68deg, rgb(211, 80, 130), rgb(199, 99, 63));
+            font-weight: 900;
         }
 
         #messages {
@@ -47,11 +63,11 @@
         }
 
         #messages li {
-            padding: 5px 10px;
+            padding: 5px 1rem;
         }
 
         #messages li:nth-child(odd) {
-            background: #eee;
+            background: rgb(255, 195, 218);
         }
     </style>
 </head>
@@ -59,7 +75,7 @@
 <body>
     <ul id="messages"></ul>
     <form action="">
-        <input id="m" autocomplete="off" /><button>Send</button>
+        <input id="m" autocomplete="off" /><button class="fancy-button bg-gradient3"><span>Send</span></button>
     </form>
 </body>
 <script src="/socket.io/socket.io.js"></script>
