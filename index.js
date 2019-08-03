@@ -28,6 +28,6 @@ io.on('connection', socket => {
 
 
 
-httpServer.listen(8080, () => {
-    console.log(`Server started on 8080`);
+httpServer.listen(process.env.PORT || 80, () => {
+    console.log(`Server started on 80`);
 });
