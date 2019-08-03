@@ -1,0 +1,17 @@
+{
+  "name": "socketPractice",
+  "version": "1.0.0",
+  "description": "get starting with socketio",
+  "main": "index.js",
+  "author": "frani",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^1.19.1",
+    "socket.io": "^2.2.0",
+    "uuid": "^3.3.2"
+  },
+  "scripts": {
+    "start": "nodemon index.js"
+  }
+}
