@@ -84,6 +84,7 @@
 <script src="/socket.io/socket.io.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
+        Notification.requestPermission();
         if (!localStorage.getItem('anon-chat-nickname')) {
             localStorage.setItem('anon-chat-nickname', prompt('write your nickname'))
         }
@@ -103,7 +104,8 @@
             window.scrollTo({
                 top: messageBody.scrollHeight,
                 behavior: 'smooth',
-            })
+            });
+            new Notification(`${from}: ${msg}`);
         })
     })
 </script>
